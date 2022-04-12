@@ -1,0 +1,36 @@
+﻿@page
+@model RazorPagePro.Pages.Admin.Products.RazorPage.IndexModel
+@{
+}
+
+<div>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>نام</th>
+                <th>مبلغ</th>
+                <th>توضیحات</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model.productDtos)
+            {
+            <tr>
+                <th>@item.Name</th>
+                <th>@item.Price</th>
+                <th>@item.Desciription</th>
+                <th>
+                    <a asp-page="Delet" asp-route-id="@item.Id">
+                        حذف
+                    </a>
+                </th>
+                <th>
+                    <a asp-page="Edit" asp-route-id="@item.Id">
+                        ویرایش
+                    </a>
+                </th>
+            </tr>
+            }
+        </tbody>
+    </table>
+</div>

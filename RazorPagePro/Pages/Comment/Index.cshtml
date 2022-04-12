@@ -1,0 +1,20 @@
+﻿
+@*routing*@
+@page "{handler?}/{id?}"
+@model RazorPagePro.Pages.Comment.IndexModel
+@{
+}
+
+<form method="post" asp-page-handler="Add" asp-route-id ="12">
+    <h1>AddHandler</h1>
+    <button type="submit"> ثبت</button>
+
+</form>
+
+<hr />
+
+<form method="post" asp-page-handler="AddComment">
+    <h1>AddComment</h1>
+    <button type="submit">ثبت کامنت</button>
+
+</form>

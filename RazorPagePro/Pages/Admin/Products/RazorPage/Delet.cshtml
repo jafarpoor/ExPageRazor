@@ -1,0 +1,24 @@
+﻿@page
+@model RazorPagePro.DeletModel
+@{
+    ViewData["Title"] = "Delet";
+}
+
+<h1>حذف کردن</h1>
+<div>
+    <hr />
+    <dl>
+        <dt class="col-md-2">
+            <label asp-for="productDtos.Name"></label>
+        </dt>
+        <dd class="col-md-8">
+            <label>@Model.productDtos.Name</label>
+        </dd>
+    </dl>
+    <form method="post" asp-page="Delet">
+        <input  type="hidden" asp-for="productDtos.Id"/>
+        <button type="submit" class="btn"></button>
+        <a asp-page="./Index">بازگشت به لیست</a>
+    </form>
+</div>
+

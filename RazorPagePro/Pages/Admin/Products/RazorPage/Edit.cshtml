@@ -1,0 +1,31 @@
+﻿@page
+@model RazorPagePro.EditModel
+@{
+    ViewData["Title"] = "Edit";
+}
+
+    <div class="row">
+        <input type="hidden" asp-for="productDtos.Id" />
+        <form class="form-group" method="post" asp-page="Edit">
+            <div class="form-group">
+                <label asp-for="productDtos.Name" class="form-control"></label>
+                <input asp-for="productDtos.Name" class="form-control" />
+            </div>
+
+            <div class="form-group">
+                <label asp-for="productDtos.Price" class="form-control"></label>
+                <input asp-for="productDtos.Price" class="form-control" />
+            </div>
+
+            <div class="form-group">
+                <label asp-for="productDtos.Desciription" class="form-control"></label>
+                <input asp-for="productDtos.Desciription" class="form-control" />
+            </div>
+
+            <div class="form-group">
+                <input type="submit" value="ثبت" class="btn-danger" />
+            </div>
+        </form>
+
+    </div>
+

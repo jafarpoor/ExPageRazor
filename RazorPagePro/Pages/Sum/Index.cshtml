@@ -1,0 +1,17 @@
+﻿@page
+@model RazorPagePro.Pages.Sum.IndexModel
+@{
+}
+
+<form method="post">
+    <label>عدد 1</label>
+    <input asp-for="number.Value1" />
+
+    <label>عدد2</label>
+    <input asp-for="number.Value2" />
+
+    <button type="submit">ثبت</button>
+</form>
+
+<hr />
+<input asp-for="@Model.number.Result" />
